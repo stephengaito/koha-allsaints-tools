@@ -1,0 +1,22 @@
+#!/bin/bash
+
+# This bash script uses the current working directory to create a simple
+# script to run the kohaLibTools command anywhere in a user's workspace.
+
+cmdScript=$(pwd)/.venv/bin/kohaLibTools
+
+cat << CMD_SCRIPT > $HOME/.local/bin/kohaLibTools
+#!/bin/sh
+
+# This shell script was created by the kohaLibTools tool
+#       './scripts/installEditableKohaLibToolsCommand'
+# script.
+
+exec $cmdScript \$@
+CMD_SCRIPT
+
+chmod a+x $HOME/.local/bin/kohaLibTools
+
+echo ""
+echo "Editable kohaLibTools command has been created"
+echo ""
