@@ -1,0 +1,23 @@
+#!.venv/bin/python
+
+import yaml
+
+from nicegui import ui
+
+from kohaLibTools.uiPage import UIPage
+
+# Import and instantiate the pages...
+# Note the order in which these modules are imported
+# will be the order in which they will appear in the navigation menu
+#
+import kohaLibTools.homePage
+import kohaLibTools.booksCheckedOut
+import kohaLibTools.bookBarCodes
+import kohaLibTools.classLists
+
+thePages = UIPage.getPages()
+
+for aPage in UIPage.getPages() :
+  aPage.create() # creates but does not draw the page
+
+ui.run()

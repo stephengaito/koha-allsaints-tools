@@ -3,20 +3,22 @@
 # This bash script uses the current working directory to create a simple
 # script to run the kohaLibTools command anywhere in a user's workspace.
 
-cmdScript=$(pwd)/.venv/bin/kohaLibTools
+cmdScript=$(pwd)/kltServer
 
-cat << CMD_SCRIPT > $HOME/.local/bin/kohaLibTools
+cat << CMD_SCRIPT > $HOME/.local/bin/kltServer
 #!/bin/sh
 
 # This shell script was created by the kohaLibTools tool
 #       './scripts/installEditableKohaLibToolsCommand'
 # script.
 
+cd $(pwd)
+
 exec $cmdScript \$@
 CMD_SCRIPT
 
-chmod a+x $HOME/.local/bin/kohaLibTools
+chmod a+x $HOME/.local/bin/kltServer
 
 echo ""
-echo "Editable kohaLibTools command has been created"
+echo "Editable kltServer command has been created"
 echo ""

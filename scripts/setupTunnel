@@ -3,7 +3,7 @@
 # koha/mariadb password can be found at:
 # /etc/koha/sites/allsaints/koha-conf.xml
 # on pi02
-# search for: `dp_scheme` (and then look for 'pass')
+# search for: `db_scheme` (and then look for 'pass')
 
 # cli connection to koha_allsaints database:
 # mysql -u koha_allsaints -p koha_allsaints --port 3306
