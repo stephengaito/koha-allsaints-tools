@@ -1,5 +1,6 @@
-user: koha_allsaints
-password: 'thePassword'
-host: localhost
-port: 3306
-database: koha_allsaints
+database:
+  user: koha_allsaints
+  password: 'thePassword'
+  host: '127.0.0.1'
+  port: 3306
+  database: koha_allsaints

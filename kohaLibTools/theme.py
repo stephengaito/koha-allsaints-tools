@@ -52,5 +52,6 @@ def frame(navigation_title: str):
   #    on_click=footer.toggle, icon='contact_support'
   #  ).props('fab')
 
-  with ui.column().classes('absolute-center items-center'):
+  #with ui.column().classes('absolute-center items-center'):
+  with ui.column().classes('items-center'):
     yield

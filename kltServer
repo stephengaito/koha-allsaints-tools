@@ -12,8 +12,11 @@ from kohaLibTools.uiPage import UIPage
 #
 import kohaLibTools.homePage
 import kohaLibTools.booksCheckedOut
-import kohaLibTools.bookBarCodes
-import kohaLibTools.classLists
+import kohaLibTools.booksCheckedOutHTML
+import kohaLibTools.booksCheckedOutCSV
+import kohaLibTools.booksCheckedOutPDF
+#import kohaLibTools.bookBarCodes  # not yet implemented
+#import kohaLibTools.classLists    # not yet implemented
 
 thePages = UIPage.getPages()
 

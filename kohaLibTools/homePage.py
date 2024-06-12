@@ -19,7 +19,12 @@ class HomePage(UIPage) :
     def thePage() :
       print(f"Drawn {self.title}")
       with theme.frame(self.title) :
-        theme.message(self.title)
-        ui.label(f"This is the {self.title} page")
+        ui.markdown("""
+        ## Home page
+
+        - [**Books Checked Out**](/booksCheckedOut) :
+          Produces a report of the books currently checked out of the library.
+
+        """)
 
 theHomePage = HomePage()
