@@ -56,20 +56,6 @@ def convertRow(aRow) :
 def getData() :
   if not dbConfig : return []
 
-  if 'password' not in dbConfig :
-    print("CAN NOT connect to the Koha database without a password!!!")
-    return []
-
-  # NOTE: if host is specified as `localhost` then the socket is used
-  # if host is specified as an IP address (`127.0.0.1`) the the port is used
-
-  if 'database' not in dbConfig : dbConfig['database'] = 'koha_allsaints'
-  if 'user'     not in dbConfig : dbConfig['user']     = 'koha_allsaints'
-  if 'host'     not in dbConfig : dbConfig['host']     = '127.0.0.1'
-  if 'port'     not in dbConfig : dbConfig['port']     = '3306'
-  if not isinstance(dbConfig['port'], int) :
-    dbConfig['port'] = int(dbConfig['port'])
-
   print("getting report data")
   db = mariadb.connect(**dbConfig)
   cursor = db.cursor()
