@@ -1,0 +1,9 @@
+[Unit]
+Description=Run the Koha All Saints School Lirbary Tools
+After=network.target
+
+[Service]
+ExecStart=/home/<aUser>/.local/bin/kltServer
+
+[Install]
+WantedBy=default.target
