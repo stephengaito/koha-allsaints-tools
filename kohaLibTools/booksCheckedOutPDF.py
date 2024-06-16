@@ -11,7 +11,7 @@ from fpdf.drawing import DeviceRGB
 
 from nicegui import app, ui
 
-from kohaLibTools.configuration import config
+from kohaLibTools.configuration import kohaConfig
 from kohaLibTools.uiPage import UIPage
 import kohaLibTools.theme as theme
 
@@ -19,6 +19,9 @@ from kohaLibTools.booksCheckedOut import columnHeaders, getData, convertRow
 
 ########################################################################
 # PDF Configuration
+
+overdueDays = 7
+if 'overdueDays' in kohaConfig : overdueDays = kohaConfig['overdueDays']
 
 numRowsPerPage  = 35
 numRowsPerGroup = 5
@@ -148,7 +151,7 @@ def createPdf() :
     aRowDict = convertRow(aRow)
     pdf.addNewPageIfNeeded(aRowDict['className'])
     for colName in columnNames :
-      if colName == 'dateDue' :
+      if colName == 'dateDue' and overdueDays < aRowDict['daysOverdue'] :
         pdf.set_text_color(pdfRed)
       else :
         pdf.set_text_color(pdfBlack)
