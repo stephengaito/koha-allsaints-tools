@@ -45,18 +45,18 @@ pdfWhite = DeviceRGB(1,1,1)
 pdfGrey  = DeviceRGB(0.5,0.5,0.5)
 pdfRed   = DeviceRGB(1,0,0)
 
-#                 class, name, barCode, title, issue, weeks, due
+#                 class, name, bookCode, title, issue, weeks, due
 tableWidths    = [85,    150,  75,      250,   85,    75,    100]
 
 columnNames = [
-  'className', 'pupilName', 'barCode', 'bookTitle',
+  'className', 'pupilName', 'bookCode', 'bookTitle',
   'dateIssued', 'weeksOut', 'dateDue'
 ]
 
 columnHeaders = {
   'className'  : 'Class Name',
   'pupilName'  : 'Pupil Name',
-  'barCode'    : 'Bar Code',
+  'bookCode'    : 'Book Code',
   'bookTitle'  : 'Book Title',
   'dateIssued' : 'Date Issued',
   'weeksOut'   : 'Weeks Out',

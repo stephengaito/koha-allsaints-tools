@@ -14,7 +14,7 @@ htmlTableHeader = """
     <tr>
       <th style="text-align:start">Class Name</th>
       <th style="text-align:start">Pupil Name</th>
-      <th style="text-align:start">Bar Code</th>
+      <th style="text-align:start">Book Code</th>
       <th style="text-align:start">Book Title</th>
       <th style="text-align:start">Date Issued</th>
       <th style="text-align:start">Weeks Out</th>
@@ -43,7 +43,7 @@ htmlRow = """
       <tr>
         <td>{className}</td>
         <td><a style="color:blue" target="_blank" href="{baseUrl}/cgi-bin/koha/members/moremember.pl?borrowernumber={borrowerNumber}">{pupilName}</a></td>
-        <td><a style="color:blue" target="_blank" href="{baseUrl}/cgi-bin/koha/catalogue/detail.pl?biblionumber={biblioNumber}">{barCode}</a></td>
+        <td><a style="color:blue" target="_blank" href="{baseUrl}/cgi-bin/koha/catalogue/detail.pl?biblionumber={biblioNumber}">{bookCode}</a></td>
         <td><a style="color:blue" target="_blank" href="{baseUrl}/cgi-bin/koha/catalogue/detail.pl?biblionumber={biblioNumber}">{bookTitle}</a></td>
         <td>{dateIssued}</td>
         <td>{weeksOut}</td>

@@ -23,7 +23,7 @@ SELECT
  DATE_FORMAT(date_due, '%Y %b %e') AS dateDue,
  DATEDIFF(CURDATE(), date_due) AS daysOverdue,
  borrowernumber AS borrowerNumber,
- barcode AS barCode,
+ barcode AS bookCode,
  biblionumber AS biblioNumber
 FROM borrowers
 JOIN issues USING (borrowernumber)
@@ -42,7 +42,7 @@ columnHeaders = [
   'dateDue',
   'daysOverdue',
   'borrowerNumber',
-  'barCode',
+  'bookCode',
   'biblioNumber'
 ]
 
