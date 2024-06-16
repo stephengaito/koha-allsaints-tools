@@ -1,3 +1,4 @@
+*.service
 config.yaml
 tmp
 pdm.lock
